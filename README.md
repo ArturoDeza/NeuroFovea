@@ -8,13 +8,14 @@ The backbone of this code is mainly driven by:
 * pix2pix super-resolution module: https://github.com/phillipi/pix2pix
 * a mixture of localized foveated templates stored in the main folder for the different rate of growth of the receptive fields specified by the scaling factor which should match the human psychophysical testing procedure as specified in the paper.
 
-### Generate Metamers for any of the a sample images:
+### Example code:
 
-These images do not have the final pix2pix Refinement module:
+Generate a metamer for the `512x512` image `10.png` with a center fixation, specified by the rate of growth of the receptive field: `s=0.25`
 
 ```
 $ th NeuroFoveaAlpha.lua -image 10.png -scale 0.25
 ```
+
 Then run the pix2pix refinement module:
 
 ```
