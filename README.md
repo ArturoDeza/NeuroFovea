@@ -17,9 +17,9 @@ The original Torch
 Note: We are currently working on pytorch re-implementation. If you have one please let us know so we can post a link to your repo here as well.
 
 
-### Example code:
+## Example code:
 
-# Create a V1 Metamer
+### Create a V1 Metamer
 
 Generate a metamer for the `512x512` image `10.png` with a center fixation, specified by the rate of growth of the receptive field: `s=0.25`
 
@@ -33,15 +33,15 @@ Then run the pix2pix refinement module:
 DATA_ROOT=./datasets/Metamers name=Metamers which_direction=AtoB phase=test th test.lua
 ```
 
-# Create a V2 Metamer
+### Create a V2 Metamer
 
-# Train your SuperResolution Refinement module calibrated to your dataset (Optional)
+### Train your SuperResolution Refinement module calibrated to your dataset (Optional)
 
-# Metamerize a folder of images
+### Metamerize a folder of images
 
-# Metamerize an image assuming a single big receptive field.
+### Metamerize an image assuming a single big receptive field.
 
-# Redefine your point of fixation
+### Redefine your point of fixation
 
 
 
