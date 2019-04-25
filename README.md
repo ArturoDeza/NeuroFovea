@@ -9,6 +9,10 @@ The code to implement our model is mainly driven by:
 * The original Metamer code of Freeman & Simoncelli: https://github.com/freeman-lab/metamers
 * a mixture of localized foveated templates stored in the main folder for the different rate of growth of the receptive fields specified by the scaling factor which should match the human psychophysical testing procedure as specified in the paper.
 
+# What is a Metamer?
+
+
+
 # Pre-requisites for code functionality:
 It was developed in CUDA 8.0 and has been tested on both CUDA 8.0 and CUDA 10.0 (though there might be some differences from CUDA 10.0 to 8.0). You will need to install:
 
