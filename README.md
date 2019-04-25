@@ -13,12 +13,14 @@ The code to implement our model is mainly driven by:
 
 
 
-# Pre-requisites for code functionality:
-It was developed in CUDA 8.0 and has been tested on both CUDA 8.0 and CUDA 10.0 (though there might be some differences from CUDA 10.0 to 8.0). You will need to install:
+## Pre-requisites for code functionality:
+It was developed in CUDA 8.0 and has been tested on both CUDA 8.0 and CUDA 10.1 (though there might be some differences from CUDA 10.1 to 8.0). You will need to install:
 
-The original Torch
+CUDA 10.1: https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1804&target_type=runfilelocal
+CUDNN 7.5.1: https://developer.nvidia.com/rdp/cudnn-download 
+Torch: https://github.com/nagadomi/waifu2x/issues/253#issuecomment-445448928
 
-Note: We are currently working on pytorch re-implementation. If you have one please let us know so we can post a link to your repo here as well.
+Note: We are currently working on a pytorch re-implementation of our Metamer model. If you have one please let us know so we can post a link to your repo here as well.
 
 
 ## Example code:
