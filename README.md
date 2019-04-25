@@ -50,7 +50,7 @@ __Observation:__ Id you'd like to use another scaling factor, as well as change 
 The model has been psychophysically tested on grayscale images, although it works approximately well on color images.
 
 This code is free to use for Research Purposes, and if used/modified in any way please consider citing:
-
+```
 @inproceedings{
 deza2018towards,
 title={Towards Metamerism via Foveated Style Transfer},
@@ -59,3 +59,4 @@ booktitle={International Conference on Learning Representations},
 year={2019},
 url={https://openreview.net/forum?id=BJzbG20cFQ},
 }
+```
