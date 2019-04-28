@@ -13,13 +13,13 @@ The code to implement our model is mainly driven by:
 
 # What is a Metamer?
 
-Metamers are a set of stimuli that are physically different but perceptually indistinguishable to each other. For example here we have a metamer that is metameric to its reference image (an approximate to the original high resolution image when sent through an autoencoder)
+Metamers are a set of stimuli that are physically different but perceptually indistinguishable to each other. For example, on the left we have a metamer that is metameric to its reference image (an approximate to the original high resolution image when sent through an autoencoder). On the right, we have two images that are heavily distorted in the visual periphery, are not metameric to the reference image, but are metameric to each other (perturbed with differente noise seeds). 
 
-<img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/Reference_vs_Synth_Metamer_V1.gif" width="256"> | <img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/Synth_vs_Synth_Metamer_V2.gif" width="256">
+| Reference vs Synthesis Metamers (V1) | Synthesis vs Synthesis Metamers (V2) |
+| --- | --- |
+| <img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/Reference_vs_Synth_Metamer_V1.gif" width="256"> | <img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/Synth_vs_Synth_Metamer_V2.gif" width="256"> |
 
-
-Here on the other hand, we have two images that are heavily distorted in the visual periphery, are not metameric to the reference image, but are metameric to each other (perturbed with differente noise seeds). 
-
+## Why does this happen?
 
 
 
