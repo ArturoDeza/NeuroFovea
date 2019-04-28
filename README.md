@@ -53,15 +53,9 @@ DATA_ROOT=./datasets/Metamers name=Metamers which_direction=AtoB phase=test th t
 $ th NeuroFoveaAlpha.lua -image 5.png -scale 0.5
 ```
 
-### Train your SuperResolution Refinement module calibrated to your dataset (Optional)
+#### Train your SuperResolution Refinement module calibrated to your dataset (Optional)
 
-### Metamerize a folder of images
-
-### Metamerize an image assuming a single big receptive field.
-
-### Redefine your point of fixation
-
-
+#### Metamerize a folder of images
 
 __Observation:__ Id you'd like to use another scaling factor, as well as change the point of fixation, you have to change the `-scale` parameter and potentially create a new 'window' folder. To generate metamers that match the rate of growth of the receptive field size of V1, we need to set the scale factor to 0.25. To generate metamers that match the rate of growth of the R.F.'s in V2, we need to set the scale factor to 0.5. It's worth noting that in our experiments our psychophysical evaluations are done both against the compressed image (ran through the auto-encoder) which is a close approximation to the high-resolution original gray scale image, as well as against synthesized metamers (Synth vs Synth). Other implementations implementations of AdaIN as well as different style transfer models may improve the general NeuroFovea metamer generation pipeline of localized Auto-Style Transfer. 
 
