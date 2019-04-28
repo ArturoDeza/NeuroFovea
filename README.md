@@ -49,7 +49,9 @@ DATA_ROOT=./datasets/Metamers name=Metamers which_direction=AtoB phase=test th t
 
 ### Create a V2 Metamer
 
+```
 $ th NeuroFoveaAlpha.lua -image 5.png -scale 0.5
+```
 
 ### Train your SuperResolution Refinement module calibrated to your dataset (Optional)
 
