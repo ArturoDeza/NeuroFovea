@@ -21,6 +21,8 @@ Metamers are a set of stimuli that are physically different but perceptually ind
 
 ### Why does this happen?
 
+<img src= "https://github.com/ArturoDeza/NeuroFovea/blob/master/Figure2.png" width="900">
+
 
 
 ## Pre-requisites for code functionality:
