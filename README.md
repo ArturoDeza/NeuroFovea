@@ -19,12 +19,6 @@ Metamers are a set of stimuli that are physically different but perceptually ind
 | --- | --- |
 | <img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/Reference_vs_Synth_Metamer_V1.gif" width="440"> | <img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/Synth_vs_Synth_Metamer_V2.gif" width="440"> |
 
-### Why does this happen?
-
-<img src= "https://github.com/ArturoDeza/NeuroFovea/blob/master/Figure2.png" width="900">
-
-
-
 ## Pre-requisites for code functionality:
 It was developed in CUDA 8.0 on Ubuntu 16.04 and has been tested on both CUDA 8.0 and CUDA 10.1 (though there might be some differences from CUDA 10.1 to 8.0) on Ubuntu 18.04. You will need to install:
 
