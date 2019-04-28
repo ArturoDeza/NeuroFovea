@@ -11,15 +11,15 @@ The code to implement our model is mainly driven by:
 * The original Metamer code of Freeman & Simoncelli: https://github.com/freeman-lab/metamers
 * a mixture of localized foveated templates stored in the main folder for the different rate of growth of the receptive fields specified by the scaling factor which should match the human psychophysical testing procedure as specified in the paper.
 
-# What is a Metamer?
+## What is a Metamer?
 
-Metamers are a set of stimuli that are physically different but perceptually indistinguishable to each other. For example, on the left we have a metamer that is metameric to its reference image (an approximate to the original high resolution image when sent through an autoencoder). On the right, we have two images that are heavily distorted in the visual periphery, are not metameric to the reference image, but are metameric to each other (perturbed with differente noise seeds). For the metameric effects to happen one must fixate at the orange dot in the center of the image. In the paper we provide more details on how we psychophysically tested this phenomena using an eye-tracker to control for center fixation, viewing distance and the visual angle of the display.
+Metamers are a set of stimuli that are *physically different but perceptually indistinguishable to each other*. For example, on the **left** we have a metamer that is metameric to its reference image (an approximate to the original high resolution image when sent through an autoencoder). On the **right**, we have two images that are heavily distorted in the visual periphery, are not metameric to the reference image, but are metameric to each other (perturbed with differente noise samples). For the metameric effects to work properly one must fixate at the orange dot at the center of the image. In the paper we provide more details on how we psychophysically tested this phenomena using an eye-tracker to control for center fixation, viewing distance and the visual angle of the display.
 
 | Reference vs Synthesis Metamers (V1) | Synthesis vs Synthesis Metamers (V2) |
 | --- | --- |
 | <img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/Reference_vs_Synth_Metamer_V1.gif" width="440"> | <img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/Synth_vs_Synth_Metamer_V2.gif" width="440"> |
 
-## Pre-requisites for code functionality:
+### Pre-requisites for code functionality:
 It was developed in CUDA 8.0 on Ubuntu 16.04 and has been tested on both CUDA 8.0 and CUDA 10.1 (though there might be some differences from CUDA 10.1 to 8.0) on Ubuntu 18.04. You will need to install:
 
 [CUDA 10.1](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1804&target_type=runfilelocal)
@@ -31,9 +31,9 @@ It was developed in CUDA 8.0 on Ubuntu 16.04 and has been tested on both CUDA 8.
 Note: We are currently working on a pytorch re-implementation of our Metamer model. If you have one please let us know so we can post a link to your repo here as well.
 
 
-## Example code:
+### Example code:
 
-### Create a V1 Metamer
+#### Create a V1 Metamer
 
 Generate a metamer for the `512x512` image `10.png` with a center fixation, specified by the rate of growth of the receptive field: `s=0.25`
 
@@ -47,7 +47,7 @@ Then run the pix2pix refinement module:
 DATA_ROOT=./datasets/Metamers name=Metamers which_direction=AtoB phase=test th test.lua
 ```
 
-### Create a V2 Metamer
+#### Create a V2 Metamer
 
 ```
 $ th NeuroFoveaAlpha.lua -image 5.png -scale 0.5
