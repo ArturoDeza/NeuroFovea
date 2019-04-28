@@ -1,4 +1,4 @@
-<img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/Model_Diagram_New.png" width="720">
+<img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/Model_Diagram_New.png" width="900">
 
 # Towards Metamerism via Foveated Style Transfer 
 Code to reproduce the Metamers used in the paper (Deza, Jonnalagadda, Eckstein. ICLR 2019). Link to the paper and discussion in openreview: https://openreview.net/forum?id=BJzbG20cFQ
