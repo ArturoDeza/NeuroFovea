@@ -65,7 +65,9 @@ DATA_ROOT=./datasets/Metamers name=Metamers which_direction=AtoB phase=test th t
 
 __Observation:__ Id you'd like to use another scaling factor, as well as change the point of fixation, you have to change the `-scale` parameter and potentially create a new 'window' folder. To generate metamers that match the rate of growth of the receptive field size of V1, we need to set the scale factor to 0.25. To generate metamers that match the rate of growth of the R.F.'s in V2, we need to set the scale factor to 0.5. It's worth noting that in our experiments our psychophysical evaluations are done both against the compressed image (ran through the auto-encoder) which is a close approximation to the high-resolution original gray scale image, as well as against synthesized metamers (Synth vs Synth). Other implementations implementations of AdaIN as well as different style transfer models may improve the general NeuroFovea metamer generation pipeline of localized Auto-Style Transfer. 
 
-The model has been psychophysically tested on grayscale images, although it works approximately well on color images.
+The model has been psychophysically tested on grayscale images, although it works approximately well on color images. 
+
+We hope this code and our paper can help researchers, scientists and engineers improve the use and design of metamer models that have potentially exciting applications in both computer vision and visual neuroscience.
 
 This code is free to use for Research Purposes, and if used/modified in any way please consider citing:
 
