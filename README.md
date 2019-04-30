@@ -28,7 +28,7 @@ It was developed in CUDA 8.0 on Ubuntu 16.04 and has been tested on both CUDA 8.
 
 [Torch (Lua)]( https://github.com/nagadomi/waifu2x/issues/253#issuecomment-445448928)
 
-Note: We are currently working on a pytorch re-implementation of our Metamer model. If you have one please let us know so we can post a link to your repo here as well.
+*Note: We are currently working on a pytorch re-implementation of our Metamer model. If you have one please let us know so we can post a link to your repo here as well.*
 
 
 ### Example code:
@@ -38,31 +38,32 @@ Note: We are currently working on a pytorch re-implementation of our Metamer mod
 Generate a metamer for the `512x512` image `10.png` with a center fixation, specified by the rate of growth of the receptive field: `s=0.25`
 
 ```
-$ th NeuroFoveaAlpha.lua -image 10.png -scale 0.25
+$ th NeuroFoveaAlpha.lua -image Datasets/10.png -scale 0.25
 ```
 
 #### Create a V2 Metamer
 
 ```
-$ th NeuroFoveaAlpha.lua -image 5.png -scale 0.5
+$ th NeuroFoveaAlpha.lua -image Datasets/5.png -scale 0.5
 ```
 
 #### Create a V2 Metamer with superresolution (as produced in the paper):
 
 ```
-$ th NeuroFoveaAlpha.lua -image 8.png -scale 0.5 - superresolution 1
+$ th NeuroFoveaAlpha.lua -image Datasets/8.png -scale 0.5 - superresolution 1
 ```
 
 #### Create a Color V1 Metamer
 
 ```
-$ th NeuroFoveaAlpha_Color.lua -image 10.png -scale 0.25
+$ th NeuroFoveaAlpha_Color.lua -image Datasets/10.png -scale 0.25
 ```
 
 
 #### Metamerize a folder of images (Fast Metamer Generation process): 
 
-
+### The Full Dataset is also available here for future work in both grayscale and color Metamers,
+they can be found in the *Datasets/* folder
 
 __Observation:__ Id you'd like to use another scaling factor, as well as change the point of fixation, you have to change the `-scale` parameter and potentially create a new 'window' folder. To generate metamers that match the rate of growth of the receptive field size of V1, we need to set the scale factor to 0.25. To generate metamers that match the rate of growth of the R.F.'s in V2, we need to set the scale factor to 0.5. It's worth noting that in our experiments our psychophysical evaluations are done both against the compressed image (ran through the auto-encoder) which is a close approximation to the high-resolution original gray scale image, as well as against synthesized metamers (Synth vs Synth). Other implementations implementations of AdaIN as well as different style transfer models may improve the general NeuroFovea metamer generation pipeline of localized Auto-Style Transfer. 
 
