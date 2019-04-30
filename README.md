@@ -47,7 +47,7 @@ $ th NeuroFoveaAlpha.lua -image Datasets/10.png -scale 0.25
 $ th NeuroFoveaAlpha.lua -image Datasets/5.png -scale 0.5
 ```
 
-#### Create a V2 Metamer with superresolution (as produced in the paper):
+#### Create a V2 Metamer with pix2pix refinement (as produced in the paper):
 
 ```
 $ th NeuroFoveaAlpha.lua -image Datasets/8.png -scale 0.5 - superresolution 1
