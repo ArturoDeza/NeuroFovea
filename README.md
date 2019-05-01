@@ -52,9 +52,7 @@ they can be found in the *Datasets/* folder**
 
 ### Example code:
 
-#### Create a V1 Metamer
-
-Generate a metamer for the `512x512` image `10.png` with a center fixation, specified by the rate of growth of the receptive field: `s=0.25`
+Generate a V1 metamer for the `512x512` image `10.png` with a center fixation, specified by the rate of growth of the receptive field: `s=0.25`
 
 ```
 $ th NeuroFovea.lua -image Datasets/1_color.png -scale 0.25 -superresolution 1 -color 1
