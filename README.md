@@ -30,7 +30,7 @@ When maintaing center fixation on the orange dot the two images that are flipped
     <td><img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/Reference_vs_Synth_Metamer_V1.gif" width="440"> </td>
     <td><img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/Synth_vs_Synth_Metamer_V2.gif" width="440"> </td>
   <tr>
-    <td colspan="2"><b>Left:</b> we have a metamer that is metameric to its reference image (an approximate to the original high resolution image when sent through an autoencoder). The rate of growth of the receptive fields on of the rendered metamer resembles the size of receptive fields of neurons in V1. <b>Right:</b>, we have two images that are heavily distorted in the visual periphery, are not metameric to the reference image, but are metameric to each other (perturbed with differente noise samples). The rate of growth of these receptive fields correspong to the sizes of V2 neurons, where it is hypothesized that the ventral stream is sensitive to texture. </td>
+    <td colspan="2"><b>Left:</b> we have a metamer that is metameric to its reference image. The rate of growth of the receptive fields on of the rendered metamer resembles the size of receptive fields of neurons in V1. <b>Right:</b>, we have two images that are heavily distorted in the visual periphery, are not metameric to the reference image, but are metameric to each other (perturbed with differente noise samples). The rate of growth of these receptive fields correspong to the sizes of V2 neurons, where it is hypothesized that the ventral stream is sensitive to texture. </td>
   </tr>
 </table>
 
@@ -82,8 +82,6 @@ $ th NeuroFoveaAlpha_Color.lua -image Datasets/10.png -scale 0.25
 they can be found in the *Datasets/* folder
 
 __Observation:__ Id you'd like to use another scaling factor, as well as change the point of fixation, you have to change the `-scale` parameter and potentially create a new 'window' folder. To generate metamers that match the rate of growth of the receptive field size of V1, we need to set the scale factor to 0.25. To generate metamers that match the rate of growth of the R.F.'s in V2, we need to set the scale factor to 0.5. It's worth noting that in our experiments our psychophysical evaluations are done both against the compressed image (ran through the auto-encoder) which is a close approximation to the high-resolution original gray scale image, as well as against synthesized metamers (Synth vs Synth). Other implementations implementations of AdaIN as well as different style transfer models may improve the general NeuroFovea metamer generation pipeline of localized Auto-Style Transfer. 
-
-The model has been psychophysically tested on grayscale images, although it works approximately well on color images. 
 
 We hope this code and our paper can help researchers, scientists and engineers improve the use and design of metamer models that have potentially exciting applications in both computer vision and visual neuroscience.
 
