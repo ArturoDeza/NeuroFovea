@@ -34,7 +34,7 @@ When maintaing center fixation on the orange dot the two images that are flipped
   </tr>
 </table>
 
-As in our previous demo, the metameric effects will only work properly if one fixates at the orange dot at the center of the image. In the paper we provide more details on how we psychophysically tested this phenomena using an eye-tracker to control for center fixation, viewing distance and the visual angle of the display. We tested our model on grayscale images, and have extended the model in this code release to color images.
+As in our previous demo, the metameric effects will only work properly if one fixates at the orange dot at the center of the image. In the paper we provide more details on how we psychophysically tested this phenomena using an eye-tracker to control for center fixation, viewing distance, display time, and the visual angle of the stimuli. We tested our model on grayscale images, and have extended the model in this code release to color images.
 
 ### Pre-requisites for code functionality:
 It was developed in CUDA 8.0 on Ubuntu 16.04 and has been tested on both CUDA 8.0 and CUDA 10.1 (though there might be some differences from CUDA 10.1 to 8.0) on Ubuntu 18.04. You will need to install:
