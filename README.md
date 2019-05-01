@@ -13,9 +13,9 @@ The code to implement our model is mainly driven by:
 
 ## What is a Metamer?
 
-| Input | Reference | Metamer | Psychophysical Simulation | 
-| --- | --- | --- | --- |
-| <img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/1_color.png" width="300"> | <img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/0_0.png" width="300"> | <img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/2_0.png" width="300"> | <img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/Reference_vs_Synth_Metamer_V1_Color.gif" width="300"> | 
+| Input | Color Metamers | 
+| --- | --- |
+| <img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/1_color.png" width="440"> | <img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/Reference_vs_Synth_Metamer_V1_Color.gif" width="440"> | 
 
 Metamers are a set of stimuli that are *physically different but perceptually indistinguishable to each other*. For example, on the **left** we have a metamer that is metameric to its reference image (an approximate to the original high resolution image when sent through an autoencoder). On the **right**, we have two images that are heavily distorted in the visual periphery, are not metameric to the reference image, but are metameric to each other (perturbed with differente noise samples). For the metameric effects to work properly one must fixate at the orange dot at the center of the image. In the paper we provide more details on how we psychophysically tested this phenomena using an eye-tracker to control for center fixation, viewing distance and the visual angle of the display.
 
