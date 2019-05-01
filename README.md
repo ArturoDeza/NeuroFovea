@@ -24,8 +24,8 @@ When maintaing center fixation on the orange dot the two images that are flipped
 
 <table>
   <tr>
-    <td> <center> Reference vs Synthesis Metamers (V1) </center> </td>
-    <td> <center> Synthesis vs Synthesis Metamers (V2) </center> </td>
+    <td align="center"> Reference vs Synthesis Metamers (V1) </td>
+    <td align="center"> Synthesis vs Synthesis Metamers (V2) </td>
   </tr>
     <td><img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/Reference_vs_Synth_Metamer_V1.gif" width="440"> </td>
     <td><img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/Synth_vs_Synth_Metamer_V2.gif" width="440"> </td>
