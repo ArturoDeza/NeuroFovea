@@ -20,7 +20,7 @@ Metamers are a set of stimuli that are *physically different but perceptually in
 
 When maintaing center fixation on the orange dot the two images that are flipped back and forth should be perceptually indistinguishable to each other even though they are physically different (strong difference in the periphery *vs* the fovea).
 
-### Testing for Visual metamerism given different rate of growth of receptive field sizes in the visual field.
+### Rendering Metamers by varying receptive field size
 
 <table>
   <tr>
@@ -30,9 +30,11 @@ When maintaing center fixation on the orange dot the two images that are flipped
     <td><img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/Reference_vs_Synth_Metamer_V1.gif" width="440"> </td>
     <td><img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/Synth_vs_Synth_Metamer_V2.gif" width="440"> </td>
   <tr>
-    <td colspan="2">On the <b>left</b> we have a metamer that is metameric to its reference image (an approximate to the original high resolution image when sent through an autoencoder). The rate of growth of the receptive fields on of the rendered metamer resembles the size of receptive fields of neurons in V1. On the <b>right</b>, we have two images that are heavily distorted in the visual periphery, are not metameric to the reference image, but are metameric to each other (perturbed with differente noise samples). The rate of growth of these receptive fields correspong to the sizes of V2 neurons, where it is hypothesized that the ventral stream is sensitive to texture. As in our previous demo, the metameric effects will only work properly if one fixates at the orange dot at the center of the image. In the paper we provide more details on how we psychophysically tested this phenomena using an eye-tracker to control for center fixation, viewing distance and the visual angle of the display.</td>
+    <td colspan="2"><b>Left:</b> we have a metamer that is metameric to its reference image (an approximate to the original high resolution image when sent through an autoencoder). The rate of growth of the receptive fields on of the rendered metamer resembles the size of receptive fields of neurons in V1. <b>Right:</b>, we have two images that are heavily distorted in the visual periphery, are not metameric to the reference image, but are metameric to each other (perturbed with differente noise samples). The rate of growth of these receptive fields correspong to the sizes of V2 neurons, where it is hypothesized that the ventral stream is sensitive to texture. </td>
   </tr>
 </table>
+
+As in our previous demo, the metameric effects will only work properly if one fixates at the orange dot at the center of the image. In the paper we provide more details on how we psychophysically tested this phenomena using an eye-tracker to control for center fixation, viewing distance and the visual angle of the display. We tested our model on grayscale images, and have extended the model in this code release to color images.
 
 ### Pre-requisites for code functionality:
 It was developed in CUDA 8.0 on Ubuntu 16.04 and has been tested on both CUDA 8.0 and CUDA 10.1 (though there might be some differences from CUDA 10.1 to 8.0) on Ubuntu 18.04. You will need to install:
