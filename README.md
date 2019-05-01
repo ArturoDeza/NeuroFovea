@@ -9,7 +9,7 @@ The code to implement our model is mainly driven by:
 * Adaptive Instance Normalization code: https://github.com/xunhuang1995/AdaIN-style
 * pix2pix super-resolution module: https://github.com/phillipi/pix2pix
 * The original Metamer code of Freeman & Simoncelli: https://github.com/freeman-lab/metamers
-* A mixture of localized foveated templates stored in the *Datasets/* for the different rate of growth of the receptive fields specified by the scaling factor which should match the human psychophysical testing procedure as specified in the paper.
+* A mixture of localized foveated templates stored in the *Receptive_Fields/* for the different rate of growth of the receptive fields specified by the scaling factor which should match the human psychophysical testing procedure as specified in the paper.
 
 ## What is a Metamer?
 
