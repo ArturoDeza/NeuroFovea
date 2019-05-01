@@ -59,8 +59,7 @@ $ th NeuroFoveaAlpha.lua -image Datasets/8.png -scale 0.5 - superresolution 1
 $ th NeuroFoveaAlpha_Color.lua -image Datasets/10.png -scale 0.25
 ```
 
-
-#### Metamerize a folder of images (Fast Metamer Generation process): 
+#### Metamerize a folder of images (Fast Metamer Generation process for big datasets): 
 
 ### The Full Dataset is also available here for future work in both grayscale and color Metamers,
 they can be found in the *Datasets/* folder
