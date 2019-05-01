@@ -12,16 +12,15 @@ The code to implement our model is mainly driven by:
 * A mixture of localized foveated templates stored in the *Receptive_Fields/* for the different rate of growth of the receptive fields specified by the scaling factor which should match the human psychophysical testing procedure as specified in the paper.
 
 ## What is a Metamer?
+Metamers are a set of stimuli that are *physically different but perceptually indistinguishable to each other*. See below for an example.
 
-
-Metamers are a set of stimuli that are *physically different but perceptually indistinguishable to each other*. See below for an example. 
 | Input | Color Metamers | 
 | --- | --- |
 | <img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/1_color.png" width="440"> | <img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/Reference_vs_Synth_Metamer_V1_Color.gif" width="440"> | 
 
 When maintaing center fixation on the orange dot the two images that are flipped back and forth should be perceptually indistinguishable to each other even though they are physically different (strong difference in the periphery *vs* the fovea).
 
-### Probing for metamerism given different rate of growth of receptive field sizes in the visual field.
+### Testing for Visual metamerism given different rate of growth of receptive field sizes in the visual field.
 
 On the **left** we have a metamer that is metameric to its reference image (an approximate to the original high resolution image when sent through an autoencoder). The rate of growth of the receptive fields on of the rendered metamer resembles the size of receptive fields of neurons in V1. On the **right**, we have two images that are heavily distorted in the visual periphery, are not metameric to the reference image, but are metameric to each other (perturbed with differente noise samples). The rate of growth of these receptive fields correspong to the sizes of V2 neurons, where it is hypothesized that the ventral stream is sensitive to texture. As in our previous demo, the metameric effects will only work properly if one fixates at the orange dot at the center of the image. In the paper we provide more details on how we psychophysically tested this phenomena using an eye-tracker to control for center fixation, viewing distance and the visual angle of the display.
 
