@@ -78,8 +78,8 @@ $ th NeuroFoveaAlpha_Color.lua -image Datasets/10.png -scale 0.25
 
 #### Metamerize a folder of images (Fast Metamer Generation process for big datasets): 
 
-### The Full Dataset is also available here for future work in both grayscale and color Metamers,
-they can be found in the *Datasets/* folder
+**The Full Dataset is also available here for future work in both grayscale and color Metamers,
+they can be found in the *Datasets/* folder**
 
 __Observation:__ Id you'd like to use another scaling factor, as well as change the point of fixation, you have to change the `-scale` parameter and potentially create a new 'window' folder. To generate metamers that match the rate of growth of the receptive field size of V1, we need to set the scale factor to 0.25. To generate metamers that match the rate of growth of the R.F.'s in V2, we need to set the scale factor to 0.5. It's worth noting that in our experiments our psychophysical evaluations are done both against the compressed image (ran through the auto-encoder) which is a close approximation to the high-resolution original gray scale image, as well as against synthesized metamers (Synth vs Synth). Other implementations implementations of AdaIN as well as different style transfer models may improve the general NeuroFovea metamer generation pipeline of localized Auto-Style Transfer. 
 
