@@ -1,9 +1,9 @@
 <img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/Model_Diagram_New.png" width="900">
 
 # Towards Metamerism via Foveated Style Transfer 
-Code to reproduce the Metamers used in the paper (Deza, Jonnalagadda, Eckstein. ICLR 2019). Link to the paper and discussion in openreview: https://openreview.net/forum?id=BJzbG20cFQ
+This repository containts the code to reproduce the Metamers used in the paper (Deza, Jonnalagadda, Eckstein. ICLR 2019). Link to the paper and discussion in openreview: https://openreview.net/forum?id=BJzbG20cFQ
 
-Code has been tested successfully on CUDA version 8.0 (Ubuntu 14.04 and 16.04) and CUDA version 10.0 (Ubuntu 18.04).
+This code has been tested successfully on CUDA version 8.0 (Ubuntu 14.04 and 16.04) and CUDA version 10.0 (Ubuntu 18.04).
 
 The code to implement our model is mainly driven by:
 * Adaptive Instance Normalization code: https://github.com/xunhuang1995/AdaIN-style
