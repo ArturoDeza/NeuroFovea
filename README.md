@@ -1,4 +1,4 @@
-<img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/Model_Diagram_New.png" width="900">
+<img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/sample_gifs/Model_Diagram_New.png" width="900">
 
 # Towards Metamerism via Foveated Style Transfer 
 This repository containts the code to reproduce the Metamers used in the paper (Deza, Jonnalagadda, Eckstein. ICLR 2019). Link to the paper and discussion in openreview: https://openreview.net/forum?id=BJzbG20cFQ
@@ -16,7 +16,7 @@ Metamers are a set of stimuli that are *physically different but perceptually in
 
 | Input | Metamer | 
 | --- | --- |
-| <img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/1_color.png" width="440"> | <img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/Reference_vs_Synth_Metamer_V1_Color.gif" width="440"> | 
+| <img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/sample_gifs/1_color.png" width="440"> | <img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/sample_gifs/Reference_vs_Synth_Metamer_V1_Color.gif" width="440"> | 
 
 When maintaing center fixation on the orange dot the two images that are flipped back and forth should be perceptually indistinguishable to each other even though they are physically different (strong difference in the periphery *vs* the fovea).
 
@@ -27,8 +27,8 @@ When maintaing center fixation on the orange dot the two images that are flipped
     <td align="center"> Reference vs Synthesis Metamers (V1) </td>
     <td align="center"> Synthesis vs Synthesis Metamers (V2) </td>
   </tr>
-    <td><img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/Reference_vs_Synth_Metamer_V1.gif" width="440"> </td>
-    <td><img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/Synth_vs_Synth_Metamer_V2.gif" width="440"> </td>
+    <td><img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/sample_gifs/Reference_vs_Synth_Metamer_V1.gif" width="440"> </td>
+    <td><img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/sample_gifs/Synth_vs_Synth_Metamer_V2.gif" width="440"> </td>
   <tr>
     <td colspan="2"><b>Left:</b> we have a metamer that is metameric to its reference image. The rate of growth of the receptive fields on of the rendered metamer resembles the size of receptive fields of neurons in V1. <b>Right:</b>, we have two images that are heavily distorted in the visual periphery, are not metameric to the reference image, but are metameric to each other (perturbed with differente noise samples). The rate of growth of these receptive fields correspong to the sizes of V2 neurons, where it is hypothesized that the ventral stream is sensitive to texture. </td>
   </tr>
