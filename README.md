@@ -14,7 +14,7 @@ The code to implement our model is mainly driven by:
 ## What is a Metamer?
 Metamers are a set of stimuli that are *physically different but perceptually indistinguishable to each other*. See below for an example.
 
-| Input | Color Metamers | 
+| Input | Metamer | 
 | --- | --- |
 | <img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/1_color.png" width="440"> | <img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/Reference_vs_Synth_Metamer_V1_Color.gif" width="440"> | 
 
