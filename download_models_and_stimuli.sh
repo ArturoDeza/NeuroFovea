@@ -1,6 +1,10 @@
-wget https://drive.google.com/file/d/1FjEgSqfq_MaxGuOJVwjKL-deOOa-iSpL/view?usp=sharing
+wget https://www.dropbox.com/s/1ok1q6og3ln5gqp/Dataset.zip
+unzip Dataset.zip
+wget https://www.dropbox.com/s/ovuyfqumr5xymds/Full_Metamer_Stimuli.zip
+unzip Full_Metamer_Stimuli.zip
+wget https://www.dropbox.com/s/ikzupnkzxhq0o2t/models.zip
 unzip models.zip
-https://drive.google.com/file/d/1STEbiHFdSWA8QVEyWX9_bPkzH8JJkyEV/view?usp=sharing
+wget https://www.dropbox.com/s/rtovjv8y1xbyso6/Receptive_Fields.zip
+unzip Receptive_Fields.zip
+wget https://www.dropbox.com/s/5semltqozxywsvz/Refinement.zip
 unzip Refinement.zip
-wget https://drive.google.com/file/d/1GSIZIN1zCEF_rcLFIeWxabp-gaiFA7xZ/view?usp=sharing
-unzip Stimuli_Color.zip
