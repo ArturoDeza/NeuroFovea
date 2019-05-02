@@ -1,5 +1,3 @@
-wget https://www.dropbox.com/s/1ok1q6og3ln5gqp/Dataset.zip
-unzip Dataset.zip
 wget https://www.dropbox.com/s/ovuyfqumr5xymds/Full_Metamer_Stimuli.zip
 unzip Full_Metamer_Stimuli.zip
 wget https://www.dropbox.com/s/ikzupnkzxhq0o2t/models.zip
