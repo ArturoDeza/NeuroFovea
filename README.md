@@ -61,7 +61,7 @@ $ bash download_models_and_stimuli.sh
 Generate a V1 metamer for the `512x512` image `10.png` with a center fixation, specified by the rate of growth of the receptive field: `s=0.25`
 
 ```
-$ th NeuroFovea.lua -image Datasets/1_color.png -scale 0.25 -refinement 1 -color 1
+$ th NeuroFovea.lua -image Dataset/1_color.png -scale 0.25 -refinement 1 -color 1
 ```
 
 To create a V2 metamer, change the scale from *0.25* to *0.5*. Scale is computed via receptive field size over retinal eccentricity of that receptive field and the values are only relevant given the size of the stimuli (26 x 26 degrees of visual angle rendered at 512 x 512 pixels). To compute the reference image, set the reference flag to 1.
