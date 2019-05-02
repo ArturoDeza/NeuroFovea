@@ -50,6 +50,12 @@ It was developed in CUDA 8.0 on Ubuntu 16.04 and has been tested on both CUDA 8.
 **The Full Dataset is also available here for future work in both grayscale and color Metamers,
 they can be found in the *Datasets/* folder**
 
+Please run:
+
+```
+$ bash download_files_and_models.sh
+```
+
 ### Example code:
 
 Generate a V1 metamer for the `512x512` image `10.png` with a center fixation, specified by the rate of growth of the receptive field: `s=0.25`
