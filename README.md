@@ -50,10 +50,10 @@ It was developed in CUDA 8.0 on Ubuntu 16.04 and has been tested on both CUDA 8.
 **The Full Dataset is also available here for future work in both grayscale and color Metamers,
 they can be found in the *Datasets/* folder**
 
-Please run:
+To complete the installation please run:
 
 ```
-$ bash download_files_and_models.sh
+$ bash download_models_and_stimuli.sh
 ```
 
 ### Example code:
