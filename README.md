@@ -58,7 +58,7 @@ $ bash download_models_and_stimuli.sh
 
 ### Example code:
 
-Generate a V1 metamer for the `512x512` image `10.png` with a center fixation, specified by the rate of growth of the receptive field: `s=0.25`
+Generate a V1 metamer for the `512x512` image `10.png` with a center fixation, specified by the rate of growth of the receptive field: `s=0.25`. Note: The approximate rendering time for a metamer should be around a second.
 
 ```
 $ th NeuroFovea.lua -image Dataset/1_color.png -scale 0.25 -refinement 1 -color 1
