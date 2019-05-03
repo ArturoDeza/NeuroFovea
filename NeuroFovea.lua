@@ -247,9 +247,9 @@ for i=1,numImage do
 	metamer = output
 
 	if reference == 0 then
-		local savePath = paths.concat(opt.outputDir, imageName .. '_metamer_s' .. scale .. '.' .. opt.saveExt)
+		savePath = paths.concat(opt.outputDir, imageName .. '_metamer_s' .. scale .. '.' .. opt.saveExt)
 	else
-		local savePath = paths.concat(opt.outputDir, imageName .. '_Reference.' .. opt.saveExt)
+		savePath = paths.concat(opt.outputDir, imageName .. '_Reference.' .. opt.saveExt)
 	end
 	print('Output image saved at: ' .. savePath)
 	image.save(savePath, metamer)
