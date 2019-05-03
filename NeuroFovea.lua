@@ -71,7 +71,7 @@ num_pooling_regions = #pooling_address - 3
 -- This parameter is the one we found that fitted the 
 -- sigmoid described in the paper for tuning the alpha values 
 -- given the size of each receptive field.
-d = 0.56
+d = 1.281 -- 0.56 * torch.log(10)
 
 mask_matrix = {}
 
@@ -102,7 +102,7 @@ for k=1,num_pooling_regions do
 	fgmask = mask_matrix[k+1]:gt(0.5):sum()
 	recep_size = torch.sqrt(fgmask/3.14)*26.0/512.0
 
-	alpha_value = -1.0 + 2.0/(1+torch.exp(-torch.log(10)*recep_size*d))
+	alpha_value = -1.0 + 2.0/(1+torch.exp(-recep_size*d))
 	alpha_matrix = alpha_matrix .. alpha_value
 
 	if k<num_pooling_regions then
