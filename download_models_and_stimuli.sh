@@ -6,3 +6,7 @@ wget https://www.dropbox.com/s/rtovjv8y1xbyso6/Receptive_Fields.zip
 unzip Receptive_Fields.zip
 wget https://www.dropbox.com/s/5semltqozxywsvz/Refinement.zip
 unzip Refinement.zip
+rm Full_Metamer_Stimuli.zip
+rm models.zip
+rm Receptive_Fields.zip
+rm Refinement.zip
