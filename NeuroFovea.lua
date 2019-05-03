@@ -67,6 +67,7 @@ scale = opt.scale
 peripheral_windows = 'Receptive_Fields/MetaWindows_clean_s' .. scale .. '/'
 pooling_address = paths.dir(peripheral_windows)
 num_pooling_regions = #pooling_address - 3
+reference = opt.reference
 
 -- This parameter is the one we found that fitted the 
 -- sigmoid described in the paper for tuning the alpha values 
@@ -140,30 +141,32 @@ end
 
 local function styleTransfer(content, style, noise)
 
-		-- Create Noise image
-		local noise = torch.randn(3,512,512)
-		noise = coral(noise:double(), content:double())
+	-- Create Noise image
+	local noise = torch.randn(3,512,512)
+	noise = coral(noise:double(), content:double())
 
-		local contentImg = content
-		noise = sizePreprocess(noise, opt.crop, opt.imageSize)
+	local contentImg = content
+	noise = sizePreprocess(noise, opt.crop, opt.imageSize)
 
-    if opt.gpu >= 0 then
-        content = content:cuda()
-        style = style:cuda()
+	if opt.gpu >= 0 then
+	content = content:cuda()
+	style = style:cuda()
 				noise = noise:cuda()
-    else
-        content = content:float()
-        style = style:float()
+	else
+	content = content:float()
+	style = style:float()
 				noise = noise:float()
-    end
+	end
 
-    styleFeature = vgg:forward(style):clone()
-    contentFeature = vgg:forward(content):clone()
-		noiseFeature = vgg:forward(noise):clone()
+	styleFeature = vgg:forward(style):clone()
+	contentFeature = vgg:forward(content):clone()
+	noiseFeature = vgg:forward(noise):clone()
 
+	if reference == 0 then
+	
 		-- Spatial Control
 		-- Get Number of Channels, Heigh and Width of the features after the forward pass through the Encoder.
-    local C, H, W = contentFeature:size(1), contentFeature:size(2), contentFeature:size(3)
+   		local C, H, W = contentFeature:size(1), contentFeature:size(2), contentFeature:size(3)
 
 		-- Initialize target feature to zero.
 		targetFeature = contentFeature:view(C,-1):clone():zero()
@@ -177,7 +180,7 @@ local function styleTransfer(content, style, noise)
 
 			local fgmask = torch.LongTensor(torch.find(maskView:gt(0.001),1))
 
-   		local contentFeatureView = contentFeature:view(C, -1)
+   			local contentFeatureView = contentFeature:view(C, -1)
 			local contentFeatureM = contentFeatureView:index(2,fgmask):view(C,fgmask:nElement(),1)
 
 			local styleFeatureView = styleFeatureM:view(C,-1)
@@ -195,11 +198,15 @@ local function styleTransfer(content, style, noise)
 			targetFeature:indexCopy(2,fgmask,targetFeatureM)
 		end
 
-    targetFeature = targetFeature:viewAs(contentFeature)
-    targetFeature = targetFeature:squeeze()
-
-		-- Decode only one vector
-    return decoder:forward(targetFeature) 
+	targetFeature = targetFeature:viewAs(contentFeature)
+	targetFeature = targetFeature:squeeze()
+		
+	else
+		targetFeature = contentFeature
+	end
+		
+	-- Decode only one vector
+	return decoder:forward(targetFeature) 
 end
 
 print('Creating save folder at ' .. opt.outputDir)
@@ -218,30 +225,34 @@ local numImage = #imagePaths
 print("# Input images: " .. numImage)
 
 for i=1,numImage do
-    local imagePath = imagePaths[i]
-    local imageExt = paths.extname(imagePath)
-    local imageImg = image.load(imagePath, 3, 'float') -- ranges from 0 to 1
-    local imageName = paths.basename(imagePath, imageExt)
-    local imageImg = sizePreprocess(imageImg, opt.crop, opt.imageSize)
+	local imagePath = imagePaths[i]
+	local imageExt = paths.extname(imagePath)
+	local imageImg = image.load(imagePath, 3, 'float') -- ranges from 0 to 1
+	local imageName = paths.basename(imagePath, imageExt)
+	local imageImg = sizePreprocess(imageImg, opt.crop, opt.imageSize)
 
-		noiseImg = torch.randn(3,512,512)
-		
-		-- Note that here the style and content image are the same input image.
-		output = styleTransfer(imageImg, imageImg, noiseImg)
+	noiseImg = torch.randn(3,512,512)
 
-		output = output:float():add_dummy()
+	-- Note that here the style and content image are the same input image.
+	output = styleTransfer(imageImg, imageImg, noiseImg)
 
-		if opt.refinement == 1 then
-			output:clamp(0.0,1.0)
-			output = netG:forward(util.preprocess_batch(output:cuda()))
-			output = util.deprocess_batch(output)
-		end
-		output = output:squeeze()
-		metamer = output
+	output = output:float():add_dummy()
 
+	if opt.refinement == 1 then
+		output:clamp(0.0,1.0)
+		output = netG:forward(util.preprocess_batch(output:cuda()))
+		output = util.deprocess_batch(output)
+	end
+	output = output:squeeze()
+	metamer = output
+
+	if reference == 0 then
 		local savePath = paths.concat(opt.outputDir, imageName .. '_metamer_s' .. scale .. '.' .. opt.saveExt)
-		print('Output image saved at: ' .. savePath)
-		image.save(savePath, metamer)
-		print('Success!')
+	else
+		local savePath = paths.concat(opt.outputDir, imageName .. '_Reference.' .. opt.saveExt)
+	end
+	print('Output image saved at: ' .. savePath)
+	image.save(savePath, metamer)
+	print('Success!')
 
 end
