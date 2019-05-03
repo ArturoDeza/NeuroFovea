@@ -89,9 +89,10 @@ end
 -- If you want to construct your own gamma function or vary the content to texture ratio per 
 -- pooling regiona manually (this is needed when you change the point of fixation from the center),
 -- you will have to modify these lines of code below whih hold all the alpha[i] values per pooling region. 
--- Note that when you change the point of fixation, the circular symmetry changes,
--- so you might have to write another program or script that verifies that you are indeed 
--- assigning the correct alpha value to the matching pooling region.
+
+-- In general the alpha value is computed as a function of receptive field size given the size of the stimuli
+-- in the psychophyhsical experiment 26 x 26 degrees of visual angle. More about this can be read in 
+-- section 4.1 (Experiment 1) of the paper.
 
 -- Alpha Values for Image-to-Texture Localized Style Transfer for every pooling region.
 -- This function is parametrized by the gamma function, but any values can be used as input 
