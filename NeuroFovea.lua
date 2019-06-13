@@ -225,6 +225,29 @@ end
 local numImage = #imagePaths
 print("# Input images: " .. numImage)
 
+function rgb2gray(im)
+	-- Image.rgb2y uses a different weight mixture
+
+	local dim, w, h = im:size()[1], im:size()[2], im:size()[3]
+	if dim ~= 3 then
+		 print('<error> expected 3 channels')
+		 return im
+	end
+
+	-- a cool application of tensor:select
+	local r = im:select(1, 1)
+	local g = im:select(1, 2)
+	local b = im:select(1, 3)
+
+	local z = torch.Tensor(w, h):zero()
+
+	-- z = z + 0.21r
+	z = z:add(0.21, r)
+	z = z:add(0.72, g)
+	z = z:add(0.07, b)
+	return z
+end
+
 for i=1,numImage do
 	local imagePath = imagePaths[i]
 	local imageExt = paths.extname(imagePath)
@@ -245,7 +268,11 @@ for i=1,numImage do
 		output = util.deprocess_batch(output)
 	end
 	output = output:squeeze()
-	metamer = output
+	if opt.color == 0 then
+		metamer = rgb2gray(output:double())
+	else 
+		metamer = output	
+	end
 
 	if reference == 0 then
 		savePath = paths.concat(opt.outputDir, imageName .. '_metamer_s' .. scale .. '.' .. opt.saveExt)
