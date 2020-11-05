@@ -47,6 +47,41 @@ It was developed in CUDA 8.0 on Ubuntu 16.04 and has been tested on both CUDA 8.
 
 *Note: We are currently working on a pytorch re-implementation of our Metamer model. If you have one please let us know so we can post a link to your repo here as well.*
 
+-----
+### Updated Installation Instructions as of November 1st, 2020:
+
+Install OpenBLAS
+```
+git clone https://github.com/xianyi/OpenBLAS.git
+cd OpenBLAS
+make NO_AFFINITY=1 USE_OPENMP=1
+sudo make install
+```
+
+Export CMAKE LIBRARY PATH that include OpenBLAS:
+
+```
+CMAKE_LIBRARY_PATH=/opt/OpenBLAS/include:/opt/OpenBLAS/lib:$CMAKE_LIBRARY_PATH
+```
+
+Install Torch (old school with Lua):
+
+```
+git clone https://github.com/nagadomi/distro.git ~/torch --recursive
+cd ~/torch
+./install-deps
+./clean.sh
+./update.sh
+. ~/torch/install/bin/torch-activate [this will activate the torch installation! You may need to run this if you open a new terminal, or you can just append to your path]
+```
+
+Install unsup package:
+
+```
+luarocks install unsup
+```
+-----
+
 **The Full Dataset is also available here for future work in both grayscale and color Metamers,
 they can be found in the *Datasets/* folder**
 
