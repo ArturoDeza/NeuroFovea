@@ -50,6 +50,8 @@ It was developed in CUDA 8.0 on Ubuntu 16.04 and has been tested on both CUDA 8.
 -----
 ### Updated Installation Instructions as of November 1st, 2020:
 
+> All to be run under the same terminal:
+
 Install OpenBLAS
 ```
 git clone https://github.com/xianyi/OpenBLAS.git
@@ -118,4 +120,4 @@ url={https://openreview.net/forum?id=BJzbG20cFQ},
 }
 ```
 
-Other inquiries: arturo_deza@fas.harvard.edu
+Other inquiries: deza@mit.edu
