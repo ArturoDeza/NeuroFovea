@@ -1,5 +1,9 @@
 <img src="https://github.com/ArturoDeza/NeuroFovea/blob/master/sample_gifs/Model_Diagram_New.png" width="900">
 
+## This code/repo has moved to PyTorch:
+
+https://github.com/ArturoDeza/NeuroFovea_PyTorch
+
 # Towards Metamerism via Foveated Style Transfer 
 This repository containts the code to reproduce the Metamers used in the paper (Deza, Jonnalagadda, Eckstein. ICLR 2019). Link to the paper and discussion in openreview: https://openreview.net/forum?id=BJzbG20cFQ
 
@@ -44,8 +48,6 @@ It was developed in CUDA 8.0 on Ubuntu 16.04 and has been tested on both CUDA 8.
 [CUDNN 7.5.1](https://developer.nvidia.com/rdp/cudnn-download)
 
 [Torch (Lua)]( https://github.com/nagadomi/waifu2x/issues/253#issuecomment-445448928)
-
-*Note: We are currently working on a pytorch re-implementation of our Metamer model. If you have one please let us know so we can post a link to your repo here as well.*
 
 -----
 ### Updated Installation Instructions as of November 1st, 2020:
